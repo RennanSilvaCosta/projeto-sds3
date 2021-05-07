@@ -1,8 +1,9 @@
-import { Seller } from "./seller"
+import { Saller } from "./saller"
+
 
 export type SaleSum = {
     sellerName: string;
-    sum: number;
+    salesSum: number;
 }
 
 export type SaleSuccess = {
@@ -17,7 +18,7 @@ export type Sale = {
     deals: number;
     amount: number;
     date: string;
-    seller: Seller;
+    saller: Saller;
 }
 
 export type SalePage = {

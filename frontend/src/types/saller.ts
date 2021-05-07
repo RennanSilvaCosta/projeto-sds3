@@ -1,4 +1,4 @@
-export type Seller = {
+export type Saller = {
     id: number;
     name: string;
 }
