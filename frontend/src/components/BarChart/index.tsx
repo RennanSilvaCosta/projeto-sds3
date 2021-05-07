@@ -17,7 +17,7 @@ type ChartData = {
     series: SeriesData[];
 }
 
-function BarChart() {
+const BarChart = () => {
     const [chartData, setChartData] = useState<ChartData>({
         labels: {
             categories: []
@@ -28,7 +28,7 @@ function BarChart() {
                 data: []                   
             }
         ]
-    })
+    });
 
     useEffect(() => {
         axios.get(`${BASE_URL}/sales/success-by-seller`)
@@ -60,7 +60,10 @@ function BarChart() {
     };
 
     return (
-        <Chart options={{ ...options, xaxis: chartData.labels}} series={chartData.series} type="bar" height="240" />
+        <Chart options={{ ...options, xaxis: chartData.labels}} 
+        series={chartData.series} 
+        type="bar" 
+        height="240" />
     );
 }
 

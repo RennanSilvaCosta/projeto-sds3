@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://dsvendas-rennan-costa.herokuapp.com/';
+export const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'https://localhost:8080';
